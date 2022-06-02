@@ -5,6 +5,7 @@ import com.apartment.interfacefactory.Iapartment;
 import com.apartment.interfacefactory.Iroom;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Apartment extends AbstractApartment implements Iapartment, Serializable {
@@ -12,12 +13,12 @@ public class Apartment extends AbstractApartment implements Iapartment, Serializ
     private String own;
 
     public Apartment(){    // contructor
-        Iroom[] ListRoom = {};
+        super();
     }
 
-    public String toStringRoom(){
+    public ArrayList<Iroom> toStringRoom(){
 
-        return listString;
+        return super.ListRoom;
     }
 
     public String getOwn() {
@@ -30,7 +31,7 @@ public class Apartment extends AbstractApartment implements Iapartment, Serializ
 
     @Override
     public void SetRoom(Iroom room) {
-        listRoom.add(room);
+        super.ListRoom.add(room);
     }
 
 }

@@ -8,6 +8,10 @@ import java.io.Serializable;
 public class Room extends AbstractRoom implements Iroom, Serializable {
     private String own;
 
+    public Room(){
+        super();
+    }
+
     @Override
     public String toString() {
         return "Room{" +

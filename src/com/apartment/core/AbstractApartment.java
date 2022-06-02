@@ -13,7 +13,7 @@ public abstract class AbstractApartment {
     protected String name;
     protected int floor;
 
-    protected ArrayList<Integer> ListRoom;
+    protected ArrayList<Iroom> ListRoom;
 
 
     public int getId() {
@@ -22,8 +22,9 @@ public abstract class AbstractApartment {
 
     public void setId(int id) {
         boolean check = true;
-        for (int i = 0; i < usage_id.length; i++) {
-            check = usage_id.get(i) == id ? false : true;
+        for (int s : usage_id)
+        {
+            check = s == id ? false : true;
         }
         if(check){
             this.id = id;
@@ -56,7 +57,7 @@ public abstract class AbstractApartment {
                 '}';
     }
 
-    public void setListRoom(ArrayList<Integer> listRoom) {
+    public void setListRoom(ArrayList<Iroom> listRoom) {
         ListRoom = listRoom;
     }
 
