@@ -2,11 +2,11 @@ package com.apartment.material;
 
 import com.apartment.core.AbstractRoom;
 import com.apartment.interfacefactory.ICom;
-import com.apartment.interfacefactory.Iroom;
+import com.apartment.interfacefactory.IRoom;
 
 import java.io.Serializable;
 
-public class Room extends AbstractRoom implements Iroom, ICom, Serializable {
+public class Room extends AbstractRoom implements IRoom, ICom, Serializable {
     private String own;
 
     public Room(){

@@ -1,4 +1,4 @@
 package com.apartment.interfacefactory;
 
-public interface Iroom{
+public interface IRoom {
 }

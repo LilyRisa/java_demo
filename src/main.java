@@ -1,6 +1,6 @@
 import com.apartment.helper.WriteObject;
 import com.apartment.interfacefactory.ICom;
-import com.apartment.interfacefactory.Iapartment;
+import com.apartment.interfacefactory.IApartment;
 import com.apartment.material.Apartment;
 import com.apartment.material.Room;
 
@@ -22,10 +22,11 @@ public class main {
             System.out.println("1. Danh sách Căn hộ");
             System.out.println("2. Thêm căn hộ");
             System.out.println("3. Lưu dữ liệu");
-            System.out.println("4. thoát");
+            System.out.println("0. thoát");
             System.out.println("Input:");
             try{
                 int menu = scn.nextInt();
+                scn.nextLine();
 
                 switch (menu){
                     case 1:
@@ -40,7 +41,7 @@ public class main {
                         WriteData();
                         System.out.println("Ghi thành công");
                         break;
-                    case 4:
+                    case 0:
                         check = false;
                 }
 
@@ -63,16 +64,16 @@ public class main {
         }
     }
 
-    public static ArrayList<Iapartment> getApartment(){
+    public static ArrayList<IApartment> getApartment(){
         WriteObject file = new WriteObject("C:\\Users\\minhm\\OneDrive\\Máy tính\\java_demo\\src\\save.txt");
         try {
             ArrayList<String> list = file.ReadFile();
-            ArrayList<Iapartment> a = new ArrayList<Iapartment>();
+            ArrayList<IApartment> a = new ArrayList<IApartment>();
             return a;
 
         }catch (IOException e) {
             System.out.println("Lỗi đọc file");
-            ArrayList<Iapartment> a = new ArrayList<Iapartment>();
+            ArrayList<IApartment> a = new ArrayList<IApartment>();
             return a;
         }
     }

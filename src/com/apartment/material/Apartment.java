@@ -1,15 +1,13 @@
 package com.apartment.material;
 
 import com.apartment.core.AbstractApartment;
-import com.apartment.interfacefactory.ICom;
-import com.apartment.interfacefactory.Iapartment;
-import com.apartment.interfacefactory.Iroom;
+import com.apartment.interfacefactory.IApartment;
+import com.apartment.interfacefactory.IRoom;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Arrays;
 
-public class Apartment extends AbstractApartment implements Iapartment, Serializable {
+public class Apartment extends AbstractApartment implements IApartment, Serializable {
 
     private String own;
 
@@ -17,7 +15,7 @@ public class Apartment extends AbstractApartment implements Iapartment, Serializ
         super();
     }
 
-    public ArrayList<Iroom> toStringRoom(){
+    public ArrayList<IRoom> toStringRoom(){
 
         return ListRoom;
     }
@@ -31,7 +29,7 @@ public class Apartment extends AbstractApartment implements Iapartment, Serializ
     }
 
     @Override
-    public void SetRoom(Iroom room) {
+    public void SetRoom(IRoom room) {
         ListRoom.add(room);
     }
 

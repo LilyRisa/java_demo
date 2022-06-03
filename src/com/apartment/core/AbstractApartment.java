@@ -2,10 +2,9 @@ package com.apartment.core;
 
 import com.apartment.helper.IcorectInput;
 import com.apartment.interfacefactory.ICom;
-import com.apartment.interfacefactory.Iroom;
+import com.apartment.interfacefactory.IRoom;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public abstract class AbstractApartment implements ICom{
     protected  int id;
@@ -14,7 +13,7 @@ public abstract class AbstractApartment implements ICom{
     protected String name;
     protected int floor;
 
-    protected ArrayList<Iroom> ListRoom = new ArrayList<Iroom>();
+    protected ArrayList<IRoom> ListRoom = new ArrayList<IRoom>();
 
 
     public int getId() {
@@ -52,7 +51,7 @@ public abstract class AbstractApartment implements ICom{
         return name;
     }
 
-    public ArrayList<Iroom> getListRoom() {
+    public ArrayList<IRoom> getListRoom() {
         return ListRoom;
     }
 
@@ -60,7 +59,7 @@ public abstract class AbstractApartment implements ICom{
     public String toString() {
         String listString = "";
 
-        for (Iroom s : ListRoom)
+        for (IRoom s : ListRoom)
         {
             listString += s.toString() + ",";
         }
@@ -72,11 +71,11 @@ public abstract class AbstractApartment implements ICom{
                 '}';
     }
 
-    public void setListRoom(ArrayList<Iroom> listRoom) {
+    public void setListRoom(ArrayList<IRoom> listRoom) {
         ListRoom = listRoom;
     }
 
-    public void setRoom(Iroom Room) {
+    public void setRoom(IRoom Room) {
         ListRoom.add(Room);
     }
 
