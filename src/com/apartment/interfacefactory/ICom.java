@@ -1,4 +1,6 @@
 package com.apartment.interfacefactory;
 
-public interface Iroom{
+public interface ICom {
+
+    int getId();
 }

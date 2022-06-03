@@ -1,6 +1,7 @@
 package com.apartment.material;
 
 import com.apartment.core.AbstractApartment;
+import com.apartment.interfacefactory.ICom;
 import com.apartment.interfacefactory.Iapartment;
 import com.apartment.interfacefactory.Iroom;
 
@@ -18,7 +19,7 @@ public class Apartment extends AbstractApartment implements Iapartment, Serializ
 
     public ArrayList<Iroom> toStringRoom(){
 
-        return super.ListRoom;
+        return ListRoom;
     }
 
     public String getOwn() {
@@ -31,7 +32,7 @@ public class Apartment extends AbstractApartment implements Iapartment, Serializ
 
     @Override
     public void SetRoom(Iroom room) {
-        super.ListRoom.add(room);
+        ListRoom.add(room);
     }
 
 }

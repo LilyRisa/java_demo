@@ -1,31 +1,31 @@
 package com.apartment.material;
 
 import com.apartment.core.AbstractRoom;
+import com.apartment.interfacefactory.ICom;
 import com.apartment.interfacefactory.Iroom;
 
 import java.io.Serializable;
 
-public class Room extends AbstractRoom implements Iroom, Serializable {
+public class Room extends AbstractRoom implements Iroom, ICom, Serializable {
     private String own;
 
     public Room(){
         super();
     }
 
+    public String getOwn() {
+        return own;
+    }
+
     @Override
     public String toString() {
-        return "Room{" +
-                "own='" + own + '\'' +
-                ", id=" + id +
-                ", NumberPerson=" + NumberPerson +
+        return "Phòng{" +
+                "Mã phòng=" + id +
+                ", Số người ở =" + NumberPerson +
+                ", người dại diện =" + own +
                 '}';
     }
 
-    public Room(int Number, int id) {
-        super();
-        this.id = id;
-        this.NumberPerson = Number;
-    }
 
     @Override
     public void SetOwn(String own) {
